@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 app.get("/posts", async (req, res) => {
   const storedPosts = await getStoredPosts()
   // Next statement is for showing the message: no posts available
-  await new Promise((resolve, reject) => setTimeout(() => resolve(), 1500))
+  // await new Promise((resolve, reject) => setTimeout(() => resolve(), 1500))
   res.json({ posts: storedPosts })
 })
 
